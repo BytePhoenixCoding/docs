@@ -1,97 +1,77 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "BlockchainTokenSniper V3"
+description: "Telegram-native tooling for LaunchSniper, MultiSniper, and SolanaSniper automation."
 ---
 
-## Setting up
+## Experience the next generation of crypto sniping
 
-Get your documentation site up and running in minutes.
+BlockchainTokenSniper (BTS) V3 is a fully managed Telegram bot suite (`@btsv3bot`) built for modern mempool sniping, channel-driven trading, and automated selling strategies. Configure everything inside Telegram, keep real-time visibility on your open positions, and let the bot react faster than manual trading ever could.
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+- [Open @btsv3bot](https://t.me/btsv3bot)
+- [Join the community](https://t.me/BlockchainTokenSniper)
 
-## Make it yours
+<Note>
+  BTS V3 is updated continuously. If you ever need direct help or want to suggest a feature, message [@BytePhoenix](https://t.me/BytePhoenix) on Telegram.
+</Note>
 
-Design a docs site that looks great and empowers your users.
+## Three specialized bots in one interface
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+<CardGroup cols={3}>
+  <Card title="LaunchSniper (EVM)" icon="rocket" href="/user-guide/launchsniper">
+    Buy new launches or liquidity adds on the exact block they go live across EVM chains.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="MultiSniper (EVM)" icon="bolt" href="/user-guide/multisniper">
+    Monitor Telegram calls, auto-buy the best leads, and let automated sell modes secure profits.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="SolanaSniper" icon="sun" href="/user-guide/solanasniper">
+    Tap into Solana call channels and route trades through Jupiter for best price execution.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
+</CardGroup>
 
-## Create beautiful pages
+## BlockchainLaunchSniper (EVM)
 
-Everything you need to create world-class documentation.
+LaunchSniper targets a single token address and reacts the instant trading is enabled or liquidity is added.
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+- Works on any EVM chain supported by BTS (Ethereum, BSC, Base, Sepolia testnet, and more).
+- Multiple entry styles: mempool snipes, enable-trading snipes, instant buys, or scheduled buys at a timestamp.
+- Mix and match sell strategies—manual exits, take-profit/stop-loss, sell-after-delay, or trailing stop loss.
+- Integrated trading checker catches honeypots and high-tax traps before funds are committed.
+- Custom RPCs per chain plus automatic fallback nodes keep transactions moving.
 
-## Need inspiration?
+## BlockchainMultiSniper (EVM)
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+MultiSniper is the automation workhorse: give it Telegram channels, whitelisted keywords, and risk limits, and it will trade on your behalf.
+
+- Channel-aware buying with per-channel allow/deny keyword filters (Pro).
+- Liquidity pair management so you can prioritize the most efficient pool for each chain.
+- Auto-sell percentages and partial exits to keep moon bags while banking profits.
+- Rich activity feed in Telegram showing cost basis, live multipliers, and realized P&L per token.
+
+## BlockchainSolanaSniper
+
+The Solana-focused sniper relies on Jupiter (Jup.ag) for routing and matches the speed of Solana-native traders.
+
+- Supports manual, autosell, time-delay, and trailing stop-loss exits across SPL tokens.
+- Simulation mode helps you validate settings without risking SOL.
+- Customizable priority fees, compute limits, and RPC endpoints.
+- Channel monitoring and keyword filtering tailored for Solana call groups.
+
+## Supported networks in V3
+
+BTS V3 currently covers the major EVM networks plus Solana. Review exact router contracts, chain IDs, and Jupiter integration details in the [supported blockchains](/supported-blockchains) reference.
+
+## How to start sniping
+
+1. Open [`@btsv3bot`](https://t.me/btsv3bot) and run `/start`.
+2. Choose **Change Chain / DEX** to select your preferred network and fund the wallet shown under **Wallet Info**.
+3. Visit **/settings** to configure the bot you plan to use, then launch it from the main menu.
+
+The [quickstart guide](/quickstart) walks through the entire onboarding workflow, including wallet and security tips.
+
+## Tiers, fees, and referrals
+
+Every user begins on the Free tier (1% fee on profitable trades). Upgrading to Pro removes trading fees and unlocks every advanced control. Read the [tiers & fees](/tiers) page for the latest details and learn how the [referral system](/referral-system) shares discounts and commissions.
+
+## Our story
+
+BlockchainTokenSniper began as a small script published to GitHub more than four years ago. Community interest exploded, so we opened a Telegram group, grew beyond 2,500 members, and kept iterating. LaunchSniper and MultiSniper expanded beyond BSC to multiple EVM chains, and in the V3 era we rebuilt everything for a Telegram-native experience. What started as a niche launch sniping tool is now a full trading suite with specialized bots, modern safety checks, and a roadmap driven by active traders like you.

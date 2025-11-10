@@ -1,0 +1,38 @@
+---
+title: "BlockchainSolanaSniper"
+description: "Monitor Solana call channels and trade through Jupiter with automated exits."
+---
+
+SolanaSniper extends BTS V3 beyond EVM networks. It listens to Solana-focused Telegram channels, buys SPL tokens through Jupiter, and executes your preferred exit strategy.
+
+## How to use SolanaSniper
+
+1. Run `/start` and switch to **Solana** using **Change Chain / DEX**.
+2. Fund the displayed SOL address (see **Wallet Info**).
+3. Navigate to `/settings → Solana Settings` to configure trading, wallet, gas, and channel options.
+4. Launch the bot via **Auto buy / sell (MultiSniper) (Solana)** or the `/solana` command.
+
+## Configuration overview
+
+### Trading settings
+
+- Toggle buying/selling independently.
+- Pick a trading mode: `MANUAL_SELLING`, `BASIC_AUTOSELL`, `SELL_AFTER_TIME_DELAY`, or `TRAILING_STOP_LOSS` (Pro).
+- Set total allowed snipes and whether the bot may re-buy previously sold tokens.
+- **Simulation mode** – Enable dry runs without touching real funds and set the virtual SOL balance.
+- **Buy settings** – Define buy amount (SOL) and slippage percentage.
+- **Sell settings** – Configure auto sell percentage, TP/SL multipliers, delay in **seconds**, and Trailing Stop Loss parameters (Pro).
+
+### Wallet, gas, and channels
+
+- **Wallet management** – Import or generate Solana wallets from the settings menu.
+- **Gas controls** – Set the priority fee (SOL) and compute unit limit to handle congested periods.
+- **Node settings (Pro)** – Provide a custom Solana RPC endpoint if needed.
+- **Monitored channels** – Add Telegram sources to follow; each can carry its own keyword filters.
+
+## Trading modes
+
+- **Manual selling** – Hold positions until you exit manually with `/sell`.
+- **Basic autosell** – Sell when the TP or SL target is hit.
+- **Sell after time delay** – Exit after a specified number of seconds.
+- **Trailing stop loss (Pro)** – Locks in gains by tracking the peak price and selling after a configured drop.

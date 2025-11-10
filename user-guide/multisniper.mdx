@@ -1,0 +1,41 @@
+---
+title: "BlockchainMultiSniper"
+description: "Automate buys and sells from Telegram alpha channels across EVM chains."
+---
+
+MultiSniper watches your chosen Telegram channels, parses token calls, and places trades that follow your risk parameters. It is ideal for nonstop hunting when you can’t sit in front of the screen.
+
+## How to use MultiSniper
+
+1. Run `/start`.
+2. Switch to your desired chain via **Change Chain / DEX**.
+3. Fund the wallet with the chain’s native currency.
+4. Open `/settings → MultiSniper Settings (EVM)` to configure trading, channels, and liquidity pairs.
+5. Start the automation from the main menu via **Auto buy / sell (MultiSniper) (EVM)** or run `/multi`.
+
+## Configuration menus
+
+- **Manage Trading Settings** – Core toggles for buy/sell, trading mode, and limits.
+- **Manage Monitored Channels** – Add/edit/delete Telegram channels to monitor. Pro users can apply whitelist and blacklist keywords per channel.
+- **Manage Liquidity Pairs** – Define which quote assets to use (WBNB, WETH, USDC, etc.), including buy amounts and filters per pair.
+
+### Trading settings
+
+- **Toggle buy/sell tokens** – Master switches for each action.
+- **Set trading mode** – `MANUAL_SELLING`, `BASIC_AUTOSELL`, `SELL_AFTER_TIME_DELAY`, or `TRAILING_STOP_LOSS` (Pro).
+- **Total allowed snipes** – Maximum number of buys before pausing (`-1` for unlimited).
+- **Allow buy previously owned tokens** – Let the bot re-enter tokens it already traded.
+- **Use single liquidity pair** – Restrict buys to the chain’s wrapped native asset.
+- **Enable trading checker** – Run pre-buy checks for honeypots and excessive taxes.
+- **Auto sell percentage** – Portion of a position to liquidate when sell logic fires.
+
+### Wallet & gas settings
+
+MultiSniper shares the global EVM wallet/gas configuration inside `/settings`. Generate, import, or rotate wallets there, and fine-tune gas mode and limits just like you would for LaunchSniper.
+
+## Trading modes
+
+- **Manual selling** – Hold until you trigger `/sell`.
+- **Basic autosell** – Take profit or cut loss at defined multipliers.
+- **Sell after time delay** – Exit after your chosen number of blocks.
+- **Trailing stop loss (Pro)** – Capture upside and protect gains with a trailing safety net once minimum profit is achieved.

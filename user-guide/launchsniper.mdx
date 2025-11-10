@@ -1,0 +1,37 @@
+---
+title: "BlockchainLaunchSniper"
+description: "Configure the EVM LaunchSniper to buy tokens the moment they go live."
+---
+
+LaunchSniper is built for precision entries on EVM chains. Point it at a specific contract, choose how aggressive you want to be, and let the bot fire instantly when liquidity appears or trading is enabled.
+
+## How to use LaunchSniper
+
+1. Run `/start` to open the main menu.
+2. Choose **Change Chain / DEX** and select the EVM network you plan to trade (Ethereum, BSC, Base, etc.).
+3. Fund the displayed wallet address with the chain’s native currency (ETH, BNB, etc.). Use **Wallet Info** to copy the address.
+4. Open `/settings → LaunchSniper Settings` and configure the parameters described below.
+5. Start a session from the main menu via **Snipe token (LaunchSniper) (EVM)** or run `/launch`, then paste the contract address when prompted.
+
+## Configuration highlights
+
+- **Transaction revert time** – Seconds to wait before treating a pending TX as failed.
+- **Slippage percentage** – Maximum allowed price movement before the buy reverts.
+- **Basic autosell multipliers** – Set take-profit (`2` = 2×) and stop-loss multipliers (`0.5` = -50%).
+- **Sell after time delay (blocks)** – Number of blocks to wait before triggering an automatic sell.
+- **Trailing stop loss (Pro)** – Configure activation threshold, trail distance, and stop value.
+- **Max buy/sell fee (Trading Checker)** – Reject tokens whose taxes exceed your tolerance.
+
+### Wallet & gas settings
+
+LaunchSniper relies on the global EVM wallet and gas controls inside `/settings`.
+
+- **Wallet options** – Show private key, generate a fresh wallet, or import via private key.
+- **Gas profile** – Choose `Legacy` (BSC, etc.) or `EIP-1559` (Ethereum) and set values such as gas price, max priority fee, and gas limit. Pro users can enable automatic gas price calculation.
+
+## Trading modes
+
+- **Manual selling** – The bot buys and holds until you execute `/sell`.
+- **Basic autosell** – Automatically sell when the TP or SL multiplier is hit.
+- **Sell after time delay** – Exit after a fixed number of blocks no matter the price.
+- **Trailing stop loss (Pro)** – Activates after reaching a minimum profit, tracks the highest price, and sells if the price falls by your configured percentage from that peak.
